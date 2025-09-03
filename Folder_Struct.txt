@@ -6,7 +6,6 @@ paavan-shah-portfolio/
 │   │   ├── cubesat.png
 │   │   ├── experience-ieee.png
 │   │   ├── experience-isro.jpg
-│   │   ├── experience-leadership.jpg
 │   │   ├── experience-svnit.jpg
 │   │   ├── experience-tsa.png
 │   │   ├── experience-tutor.jpg
