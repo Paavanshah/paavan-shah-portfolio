@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Languages",
+    "items": [
+      "C++",
+      "C",
+      "Python",
+      "Verilog",
+      "MATLAB"
+    ]
+  },
+  {
+    "title": "Software & Tools",
+    "items": [
+      "ROS2",
+      "Arduino IDE",
+      "Xilinx Vivado",
+      "EasyEDA",
+      "LTspice",
+      "Ubuntu",
+      "Fusion 360",
+      "Onshape"
+    ]
+  },
+  {
+    "title": "Hardware & Embedded Platforms",
+    "items": [
+      "Arduino",
+      "ESP32 / ESP8266",
+      "Raspberry Pi",
+      "Jetson Nano",
+      "Pixhawk 2.4.8",
+      "BASYS3",
+      "MSP430"
+    ]
+  }
+]

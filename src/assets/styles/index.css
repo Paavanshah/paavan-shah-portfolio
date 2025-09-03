@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keyframes for the animated grid background */
+@keyframes pan-grid {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200px 200px; /* Controls the speed and distance of the pan */
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased bg-theme-bg text-theme-text-primary;
+    --grid-color: theme('colors.theme-border');
+    background-image:
+      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: pan-grid 20s linear infinite;
+    cursor: none; /* For the custom cursor */
+  }
+  section {
+    scroll-margin-top: 64px;
+  }
+  a, button, [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Custom class for the futuristic corner brackets on cards */
+@layer components {
+  .card-brackets {
+    position: relative;
+  }
+  .card-brackets::before,
+  .card-brackets::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: theme('colors.theme-accent');
+    transition: all 0.3s ease-in-out;
+  }
+  .card-brackets::before {
+    top: -5px;
+    left: -5px;
+    border-top-width: 2px;
+    border-left-width: 2px;
+  }
+  .card-brackets::after {
+    bottom: -5px;
+    right: -5px;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+  }
+  .card-brackets:hover::before,
+  .card-brackets:hover::after {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  .hexagon-clip-path {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}

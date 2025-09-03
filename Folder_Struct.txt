@@ -1,0 +1,63 @@
+paavan-shah-portfolio/
+├── public/
+│   ├── images/
+│   │   ├── calculator-fpga.png
+│   │   ├── chandra-rover.jpg
+│   │   ├── cubesat.png
+│   │   ├── experience-ieee.png
+│   │   ├── experience-isro.jpg
+│   │   ├── experience-leadership.jpg
+│   │   ├── experience-svnit.jpg
+│   │   ├── experience-tsa.png
+│   │   ├── experience-tutor.jpg
+│   │   ├── experience-urfu.png
+│   │   ├── matlab-dsp.png
+│   │   ├── maze-solver.jpg
+│   │   ├── nuc-learn.png
+│   │   ├── rover.jpg
+│   │   └── smart-farming.jpg
+│   └── Paavan_Shah_Resume.pdf
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   └── hero-image.jpg
+│   │   ├── styles/
+│   │   │   └── index.css
+│   │   └── Robotics.json
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── Section.jsx
+│   │   ├── sections/
+│   │   │   ├── About.jsx
+│   │   │   ├── Achievements.jsx
+│   │   │   ├── Contact.jsx
+│   │   │   ├── Education.jsx
+│   │   │   ├── Experience.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── Projects.jsx
+│   │   │   ├── Publications.jsx
+│   │   │   └── Skills.jsx
+│   │   └── ui/
+│   │       ├── AnimatedView.jsx
+│   │       ├── CustomCursor.jsx
+│   │       └── Preloader.jsx
+│   ├── data/
+│   │   ├── achievements.json
+│   │   ├── config.json
+│   │   ├── education.json
+│   │   ├── experience.json
+│   │   ├── projects.json
+│   │   ├── publications.json
+│   │   └── skills.json
+│   ├── hooks/
+│   │   └── useActiveSection.js
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js

@@ -1,0 +1,21 @@
+[
+    {
+        "degree": "BTech",
+        "institution": "Birla Vishvakarma Mahavidyalaya (BVM)",
+        "dates": "Sept 2022 – Present",
+        "result": "CGPA: 8.98/10.0",
+        "coursework": ["Embedded Systems & IoT", "Satellite & Mobile Comms", "Control Systems", "VLSI Design"]
+    },
+    {
+        "degree": "HSC",
+        "institution": "Shardayatan School",
+        "dates": "May 2021 – May 2022",
+        "result": "Percentage: 61.62%"
+    },
+    {
+        "degree": "SSC",
+        "institution": "P.R. Khatiwala Vidya Sankul",
+        "dates": "Apr 2019 – May 2020",
+        "result": "Percentile: 91.63"
+    }
+]

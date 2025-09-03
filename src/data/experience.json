@@ -1,0 +1,63 @@
+[
+  {
+    "role": "Junior Research Intern",
+    "org": "Space Applications Center (ISRO)",
+    "location": "Ahmedabad",
+    "dates": "31 May 2024 – 9 Aug 2024",
+    "bullets": [
+      "Conducted electro-optical characterization and data analysis of the SWIR6000 image sensor.",
+      "Gained proficiency in LabVIEW for sensor data acquisition and analysis, producing over 50 detailed performance graphs.",
+      "Operated and troubleshooted the complete hardware setup of the SWIR6000 sensor."
+    ],
+    "image": "/images/experience-isro.jpg"
+  },
+  {
+    "role": "Research Intern",
+    "org": "Ural Federal University",
+    "location": "Yekaterinburg, Russia",
+    "dates": "21 Jul 2025 – 3 Aug 2025",
+    "bullets": [
+      "Developed NucLearn, an educational and gamified web platform on nuclear technologies.",
+      "Collaborated with peers from multiple countries during a 24-hour HackAtom hackathon."
+    ],
+    "image": "/images/experience-urfu.png"
+  },
+  {
+    "role": "Research Intern",
+    "org": "Sardar Vallabhbhai National Institute of Technology",
+    "location": "Surat",
+    "dates": "26 May 2025 – 30 June 2025",
+    "bullets": [
+      "Developed a complete perception-to-planning pipeline for autonomous drone navigation.",
+      "Deployed the system on Jetson Nano, integrating Intel RealSense and Open3D."
+    ],
+    "image": "/images/experience-svnit.jpg"
+  },
+  {
+    "role": "Space Tutor",
+    "org": "Origin Antares",
+    "dates": "1 May 2025 – Present",
+    "bullets": [
+      "Providing online tutoring on satellite systems, CubeSat, and space communication."
+    ],
+    "image": "/images/experience-tutor.jpg"
+  },
+  {
+    "role": "Chairperson, IEEE WIE AG (Women in Engineering)",
+    "org": "IEEE WIE AG (Women in Engineering)",
+    "dates": "21 March 2025 – Present",
+    "bullets": [
+      "Leading the Women in Engineering student body, organizing events and workshops to promote gender diversity in engineering."
+    ],
+    "image": "/images/experience-ieee.png"
+  },
+  {
+    "role": "Vice Chair, The Space Association (TSA)",
+    "org": "The Space Association (TSA)",
+    "dates": "25 March 2025 – Present",
+    "bullets": [
+      "Overseeing operations and organizing space exploration-related events for the student community, including CubeSat workshops and lectures."
+    ],
+    "image": "/images/experience-tsa.png"
+  }
+]
