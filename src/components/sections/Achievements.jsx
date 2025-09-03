@@ -1,6 +1,6 @@
 import { Section } from '../layout/Section.jsx';
 import { AnimatedView } from '../ui/AnimatedView.jsx';
-import achievementsData from '../../data/achievements.json';
+import achievementsData from '../../data/achievements.js';
 import { FaTrophy } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 

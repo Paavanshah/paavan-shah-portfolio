@@ -1,4 +1,9 @@
-{
+// Import your three achievement gallery images
+import achievement1 from '../assets/images/achievement-1.jpg';
+import achievement2 from '../assets/images/achievement-2.jpg';
+import achievement3 from '../assets/images/achievement-3.jpg';
+
+const achievementsData = {
   "awards": [
     { "title": "Silver Medalist, Highest CPI in 1st & 2nd Year - EC Department, BVM", "date": "Feb 2025" },
     { "title": "Gaurav Puraskar recipient, Anand City - for securing 1st Place, Robofest 4.0", "date": "Mar 2025" },
@@ -10,8 +15,10 @@
     { "title": "Organizer, 8-hour CubeSat Workshop, Birla Vishvakarma Mahavidyalaya", "date": "Aug 2024" }
   ],
   "galleryImages": [
-    "/images/achievement-1.jpg",
-    "/images/achievement-2.jpg",
-    "/images/achievement-3.jpg"
+    achievement1,
+    achievement2,
+    achievement3
   ]
-}
+};
+
+export default achievementsData;
