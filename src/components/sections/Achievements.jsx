@@ -3,21 +3,23 @@ import { AnimatedView } from '../ui/AnimatedView.jsx';
 import achievementsData from '../../data/achievements.js';
 import { FaTrophy } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const Achievements = () => {
   const { awards, galleryImages } = achievementsData;
+  const { t } = useTranslation();
 
   return (
-    <Section id="achievements" title="[ Achievements ]">
+    <Section id="achievements" title={t('achievements.title', '[ Achievements ]')}>
       <div className="max-w-4xl mx-auto">
-        {/* List of Awards */}
         <ul className="space-y-4">
           {awards.map((item, index) => (
             <AnimatedView key={index}>
               <li className="flex items-start gap-4 p-4 bg-theme-border/50 rounded-lg">
                 <FaTrophy className="text-xl text-theme-accent mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-theme-text-primary">{item.title}</p>
+                  {/* Fixed: Now correctly calls the translation using item.key */}
+                  <p className="font-semibold text-theme-text-primary">{t(`achievements.${item.key}`)}</p>
                   <p className="text-sm text-theme-text-secondary">{item.date}</p>
                 </div>
               </li>
@@ -25,7 +27,6 @@ export const Achievements = () => {
           ))}
         </ul>
 
-        {/* Image Gallery Grid */}
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12"
           initial="hidden"
@@ -46,7 +47,6 @@ export const Achievements = () => {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </Section>
   );

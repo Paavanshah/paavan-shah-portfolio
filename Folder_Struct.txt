@@ -1,25 +1,33 @@
 paavan-shah-portfolio/
 ├── public/
-│   ├── images/
-│   │   ├── calculator-fpga.png
-│   │   ├── chandra-rover.jpg
-│   │   ├── cubesat.png
-│   │   ├── experience-ieee.png
-│   │   ├── experience-isro.jpg
-│   │   ├── experience-svnit.jpg
-│   │   ├── experience-tsa.png
-│   │   ├── experience-tutor.jpg
-│   │   ├── experience-urfu.png
-│   │   ├── matlab-dsp.png
-│   │   ├── maze-solver.jpg
-│   │   ├── nuc-learn.png
-│   │   ├── rover.jpg
-│   │   └── smart-farming.jpg
-│   └── Paavan_Shah_Resume.pdf
+│   ├── Paavan_Shah_Resume.pdf
+│   └── robot-favicon.svg
 ├── src/
 │   ├── assets/
 │   │   ├── images/
-│   │   │   └── hero-image.jpg
+│   │   │   ├── achievement-1.jpg
+│   │   │   ├── achievement-2.jpg
+│   │   │   ├── achievement-3.jpg
+│   │   │   ├── air-sampling.jpg       <-- NEW (Project)
+│   │   │   ├── avatar.jpg
+│   │   │   ├── calculator-fpga.png
+│   │   │   ├── chandra-rover.jpg
+│   │   │   ├── cubesat.png
+│   │   │   ├── experience-ieee.png
+│   │   │   ├── experience-isro.jpg
+│   │   │   ├── experience-prl.jpg     <-- NEW (Experience)
+│   │   │   ├── experience-svnit.jpg
+│   │   │   ├── experience-tsa.png
+│   │   │   ├── experience-tutor.jpg
+│   │   │   ├── experience-urfu.png
+│   │   │   ├── experience-zydus.jpg   <-- NEW (Experience)
+│   │   │   ├── hero-image.jpg
+│   │   │   ├── junarakar-sat.jpg      <-- NEW (Project)
+│   │   │   ├── matlab-dsp.png
+│   │   │   ├── maze-solver.jpg
+│   │   │   ├── nuc-learn.png
+│   │   │   ├── rover.jpg
+│   │   │   └── smart-farming.jpg
 │   │   ├── styles/
 │   │   │   └── index.css
 │   │   └── Robotics.json
@@ -43,16 +51,22 @@ paavan-shah-portfolio/
 │   │       ├── CustomCursor.jsx
 │   │       └── Preloader.jsx
 │   ├── data/
-│   │   ├── achievements.json
+│   │   ├── achievements.js
 │   │   ├── config.json
 │   │   ├── education.json
-│   │   ├── experience.json
-│   │   ├── projects.json
+│   │   ├── experience.js
+│   │   ├── projects.js
 │   │   ├── publications.json
 │   │   └── skills.json
 │   ├── hooks/
 │   │   └── useActiveSection.js
+│   ├── locales/                  <-- NEW FOLDER
+│   │   ├── de.json               <-- NEW
+│   │   ├── en-IN.json            <-- NEW
+│   │   ├── en-US.json            <-- NEW
+│   │   └── ja.json               <-- NEW
 │   ├── App.jsx
+│   ├── i18n.js                   <-- NEW CONFIG FILE
 │   └── main.jsx
 ├── .gitignore
 ├── index.html

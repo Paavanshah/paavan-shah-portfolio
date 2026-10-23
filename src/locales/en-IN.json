@@ -1,0 +1,225 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "gallery": "Gallery", 
+    "experience": "Experience",
+    "education": "Education",
+    "achievements": "Achievements",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I’m",
+    "name": "Paavan Shah",
+    "roles": [
+      "Robotics & Embedded Firmware Engineer",
+      "Satellite Communication & SmallSat Systems",
+      "Autonomous Navigation & Control",
+      "Wireless Sensor Networks"
+    ],
+    "skills": [
+      "Robotics Firmware",
+      "Autonomous Navigation",
+      "Satellite Systems",
+      "Embedded Systems"
+    ]
+  },
+  "about": {
+    "title": "[ About Me ]",
+    "p1": "I am a Robotics and Embedded Firmware Engineer with practical experience in autonomous navigation, real-time control, multi-sensor embedded systems, and scientific instrumentation.",
+    "p2": "My background includes developing ROS2-based robotic systems, hardware debugging, and C/C++ firmware development. I have built complete systems from the ground up, including an award-winning 8-wheeled autonomous rover, near-space payloads, CubeSat prototypes, and embedded sensing platforms.",
+    "p3": "Driven by a strong interest in robotics, space systems, and low-level system design, I recently graduated as a Gold Medalist in Electronics and Communication Engineering and am currently contributing to medical device electronic systems as a Graduate Engineer Trainee at Zydus MedTech."
+  },
+  "experience": {
+    "title": "[ Experience ]",
+    "zydus": {
+      "role": "Graduate Engineer Trainee (GET)",
+      "org": "Zydus MedTech",
+      "loc": "Ahmedabad",
+      "b1": "Working in the HemoD Electrical Department on electrical and electronic systems for medical-device applications.",
+      "b2": "Supporting sensor evaluation, hardware testing, technical investigation, and system-level validation activities.",
+      "b3": "Contributing to proof-of-concept development and evaluation of electronic subsystems."
+    },
+    "prl": {
+      "role": "Research Intern",
+      "org": "Physical Research Laboratory (PRL)",
+      "loc": "Ahmedabad",
+      "b1": "Worked on atmospheric instrumentation and embedded data-acquisition systems for scientific experiments.",
+      "b2": "Developed firmware and sensor-integration solutions for pressure, temperature, humidity, flow, and current measurements.",
+      "b3": "Collaborated on the development and testing of an automated air-sampling payload for aerosol vertical profiling."
+    },
+    "origin": {
+      "role": "Space Tutor Intern",
+      "org": "Origin Antares",
+      "b1": "Provided online tutoring on satellite systems, CubeSat design, and space communication.",
+      "b2": "Mentored 50+ students on practical aspects of satellite technologies and space systems."
+    },
+    "urfu": {
+      "role": "Research Intern",
+      "org": "Ural Federal University",
+      "loc": "Yekaterinburg, Russia",
+      "b1": "Completed an international software internship, applying Python programming and logic algorithms to real-world datasets.",
+      "b2": "Contributed to 'NucLearn,' a gamified educational platform integrating simulations, logic gates, and interactive modules.",
+      "b3": "Implemented software logic during the HackAtom hackathon while collaborating with an international team."
+    },
+    "svnit": {
+      "role": "Research Intern",
+      "org": "SVNIT",
+      "loc": "Surat",
+      "b1": "Developed a perception-to-planning pipeline for autonomous drone navigation.",
+      "b2": "Implemented real-time APF and VFH obstacle-avoidance algorithms in Unreal Engine.",
+      "b3": "Deployed the system on Jetson Nano with Intel RealSense and Open3D for embedded execution."
+    },
+    "isro": {
+      "role": "Junior Research Intern",
+      "org": "Space Applications Centre (SAC), ISRO",
+      "loc": "Ahmedabad",
+      "b1": "Conducted electro-optical characterization and data analysis of the SWIR6000 sensor.",
+      "b2": "Produced 50+ performance graphs using LabVIEW for sensor data acquisition and characterization.",
+      "b3": "Operated and troubleshot hardware setups for optical detectors and image sensors."
+    }
+  },
+  "projects": {
+    "title": "[ Projects ]",
+    "viewAll": "View All Projects",
+    "allTitle": "All Projects",
+    "allSubtitle": "A complete archive of my aerospace, robotics, and embedded systems work.",
+    "viewDetails": "View Details",
+    
+    "fpgaCalculator": {
+      "title": "4-Bit FPGA Calculator (BASYS3)",
+      "summary": "A hardware-level 4-bit arithmetic calculator implemented on a BASYS3 FPGA development board using Verilog HDL, featuring a custom 7-segment multiplexer.",
+      "details": "Designed and implemented a 4-bit arithmetic calculator at the Register Transfer Level (RTL) using Verilog HDL, deployed on the BASYS3 FPGA development board containing the Xilinx Artix-7 architecture.\n\nThe hardware design processes dual 4-bit operands via onboard switches and utilizes a 2-bit selector for combinational logic execution of addition, subtraction, multiplication, and division. I engineered a custom clock divider and multiplexing logic to split the calculated outputs into tens and units, driving the board's 4-digit 7-segment display for real-time visualization.\n\nTo ensure robust execution, the system features dedicated sequential logic to detect and trap division-by-zero scenarios, automatically overriding the standard numerical output to display an 'EE' error code. The complete architecture was thoroughly verified through timing simulations and synthesized for optimal resource utilization."
+    },
+
+   "bleAirMouse": {
+      "title": "BLE Air Mouse & Reverse Engineering",
+      "summary": "Reverse-engineered a mass-market BLE remote to its bare schematic, subsequently applying DFM insights to build a custom ESP32 motion-controlled Air Mouse.",
+      "details": "In this two-part electronic product design study, I deconstructed a commercial BLE remote and subsequently designed a custom, motion-controlled Air Mouse from scratch.\n\nPart one involved a complete teardown of a mass-market BLE selfie remote. Using a multimeter and component datasheets, I successfully mapped the entire circuit, identifying the ST17H26 SoC, TP4056 charging IC, and ME6211 LDO regulator. I recreated the schematic in EasyEDA and engineered a 1:1 PCB clone featuring a custom Meandered Inverted-F Antenna (MIFA). A comprehensive BOM analysis revealed a sub-$2 manufacturing cost, providing deep insights into Design for Manufacturability (DFM) and mass-market power management.\n\nApplying these hardware integration principles in part two, I developed a 6-axis BLE Air Mouse using an ESP32 and an MPU6050 gyroscope/accelerometer. I wrote custom firmware utilizing the BleCombo library for driverless Bluetooth HID emulation. To ensure fluid cursor movement, I implemented a boot-time gyro calibration routine to eliminate sensor drift and applied a software low-pass filter to smooth out high-frequency hand jitters, complete with an adjustable DPI toggle and RGB status feedback."
+    },
+
+   "ecgDashboard": {
+      "title": "Comprehensive ECG Analysis Dashboard",
+      "summary": "A 100% browser-based ECG monitor using the Web Serial API, featuring a custom JS signal processing algorithm for clinical-grade R-peak detection.",
+      "details": "Developed a low-cost, portable Electrocardiogram (ECG) monitor that streams live biopotential signals directly to a modern web browser without requiring native software or drivers.\n\nThe hardware architecture utilizes an AD8232 analog front-end to amplify and band-pass filter the cardiac signal, which is then digitized at 200Hz by an Arduino Nano. To bridge the hardware-web gap, I utilized the HTML5 Web Serial API, allowing the single-page application (SPA) to establish a direct, driverless communication channel with the microcontroller.\n\nThe core of the software is a robust, 6-stage DSP algorithm written purely in JavaScript. Operating on a 60-second data buffer, it applies differentiation, non-linear squaring, moving window integration, and dynamic thresholding to isolate the QRS complex. Crucially, I implemented a 'Lookback Validation' step that analyzes raw slope data to actively reject T-wave interference. The dashboard performs real-time plotting via the Canvas API and calculates clinical metrics including Heart Rate (BPM), R-R Interval, and Heart Rate Variability (SDNN), while offering comprehensive PDF and CSV report generation for telemedicine applications."
+    },
+
+   "airSampling": {
+      "title": "Automated Air Sampling System",
+      "summary": "UAV-based payload featuring custom 2-layer PCBs, pressure-aware control logic, and multi-sensor integration for aerosol vertical profiling.",
+      "details": "Developed as my B.Tech final-year project at the Physical Research Laboratory (PRL), Ahmedabad, this system is a complete UAV-based platform designed for atmospheric aerosol vertical profiling.\n\nI engineered a custom 4-layer PCB powered by an ESP32 to manage a pressure-aware pump and solenoid valve system, ensuring consistent Tedlar bag air sampling across varying altitudes. The payload integrates BME680, AHT20, and IMU sensors via an I²C multiplexer with real-time SD card data logging.\n\nBeyond the payload electronics, I designed the 3D-printed enclosure in Onshape and built the 850mm hexa-rotor UAV platform (Pixhawk 2.4.8), successfully flight-testing the integrated 2kg payload at altitudes up to 100 meters."
+    },
+    "junarakarSat": {
+      "title": "Junarakar Sat-01 (Project N.I.M.B.U.S.)",
+      "summary": "Led a near-space weather balloon mission to 30km altitude, featuring custom avionics, LoRa telemetry, and atmospheric sensors.",
+      "details": "As Team Lead for Project N.I.M.B.U.S. (Near-Space Instrumentation for Meteorological Balloon Understanding System), I directed the complete lifecycle of a high-altitude weather balloon mission that successfully reached approximately 30km above Earth.\n\nI designed the central flight controller PCB (SKYSAT-Mk-1) in KiCad. The avionics stack was powered by a Teensy 4.0 and integrated a suite of environmental sensors (BMP180, DHT22, MQ-131, MPU6050). To ensure data survival, I engineered a dual-communication architecture featuring LoRa (433MHz) for primary real-time telemetry and a GSM/GPRS module for backup recovery tracking.\n\nDespite extreme stratospheric temperatures causing a temporary mid-flight power anomaly, the payload's robust design allowed it to recover and resume transmitting during descent. The mission successfully captured vital atmospheric data and was safely recovered over 100km from the launch site, garnering state-level recognition and widespread media coverage."
+    },
+    "autonomousRover": {
+      "title": "8-Wheeled Autonomous Rover (ROBOFEST 4.0 Winner)",
+      "summary": "National 1st Prize winning 8-wheeled rover featuring a custom double-bogie suspension, ROS2 SLAM navigation, and NVIDIA Jetson Nano compute.",
+      "details": "As Team Lead, I directed the mechanical design, electronics integration, and software architecture for this 8-wheeled all-terrain autonomous rover. The system secured 1st Place and a ₹1.25 million prize at the national-level GUJCOST ROBOFEST 4.0 competition. Its novel kinematic design has been officially patented under the Government of India (Design No. 448438-001). Due to its successful deployment, the rover is currently on permanent display at the Robotics Gallery in Gujarat Science City, Ahmedabad.\n\nMechanically, we engineered a custom double-bogie suspension system—eliminating springs and stub axles—to maintain continuous 8-wheel ground contact while scaling obstacles up to twice the wheel diameter and ascending 50-degree inclines. The system fully supports dynamic skid steering and zero-radius turning.\n\nThe avionics and compute stack features an NVIDIA Jetson Nano bridged to a Pixhawk 2.4.8 flight controller. For autonomy, I implemented a complete ROS2 stack utilizing a YDLIDAR OS30A depth camera and an 8MP IR-CUT camera for 2D/3D SLAM, obstacle avoidance, and visual odometry. This is fused with GPS telemetry for precise waypoint navigation. Custom control nodes dynamically modulate the Sabertooth 25A dual motor drivers, delivering closed-loop control to eight 250W Planetary Gear DC motors, allowing seamless mode-switching between FlySky RF manual override and fully autonomous traversal."
+    },
+    "cubesat": {
+      "title": "1U CubeSat Prototype",
+      "summary": "The foundational 1U CubeSat prototype that launched my journey into satellite engineering, evolving from a cardboard mockup to a fully integrated 3D-printed flight model.",
+      "details": "During my internship at SAC ISRO in July 2024, I was deeply inspired by satellite technology and resolved to build my own. What started 'just for fun' as a simple black cardboard structure to visualize the 10cm x 10cm x 10cm form factor quickly evolved into a serious engineering pursuit.\n\nBy September 2024, I began formal CAD modeling and built a brown cardboard dimensional replica before committing to a 3D-printed ABS chassis. By February 2025, the fully functional prototype was complete. The avionics stack integrates a Arduino Nano, interfacing with a sensor suite that includes an MPU6050, GY-BME280 altimeter, NEO-6M GPS, and an MQ-9 gas sensor. Power is managed via a 1500mAh LiPo battery and deployable 6V solar panels, while communication relies on an NRF24L01 transceiver and an ESP32-CAM.\n\nThis prototype successfully served as the crucial proof-of-concept for my aerospace ambitions. The experience gained here directly paved the way for Project N.I.M.B.U.S., allowing me to assemble a 15-person team and secure ₹75,000 in SSIP Gujarat funding to launch the Junarakar Sat-01 near-space mission."
+    },
+    "nucLearn": {
+      "title": "NucLearn - Interactive Educational Platform",
+      "summary": "A gamified web platform featuring an AI chatbot and economic simulators, built during a 24-hour international hackathon at Ural Federal University, Russia.",
+      "details": "I developed NucLearn as part of the multinational Team 'Anantam' during the 24-hour 'HackAtom' hackathon at the Ural Federal University AI/ML Summer Internship in Yekaterinburg, Russia (July 2025).\n\nNucLearn is a purely client-side web application (HTML, CSS, JavaScript) designed to educate users on the economic impacts of non-energy nuclear technologies. I was personally responsible for coding the 'IsoAdventure' scenario-based storytelling game, integrating the 'IsoBot' AI chatbot for interactive guidance, and structuring the 'Isotopedia' digital encyclopedia.\n\nThe project successfully blended modular front-end engineering with gamification and educational analytics, culminating in a live demonstration to the HackAtom jury. It stands as a testament to effective cross-cultural collaboration and rapid prototyping under strict time constraints."
+    },
+    "mazeSolver": {
+      "title": "Autonomous Maze Solver (ROBOFEST 3.0 Finalist)",
+      "summary": "National finalist maze-solving robot featuring a custom PCB, Raspberry Pi Pico, VL53L0X TOF sensors, and an optimized pathfinding algorithm.",
+      "details": "As a core member of Team Anveshak, I contributed to the development of this autonomous maze-solving robot, which reached the finals of the GUJCOST ROBOFEST 3.0 competition and secured a ₹2.5 Lakhs prize.\n\nMechanically, we designed a highly compact, lightweight 3D-printed ABS chassis driven by N20 DC Encoder Motors. The electronic architecture is centered around a custom-designed PCB created in EasyEDA and powered by a Raspberry Pi Pico featuring a dual-core ARM Cortex-M0+ processor. For precise spatial mapping, we integrated an array of GY-53 VL53L0X Time-of-Flight (TOF) sensors to detect walls and navigate complex layouts reliably.\n\nFor autonomy, we developed a custom cell-based pathfinding algorithm. The robot continuously polls sensor data to map unvisited nodes to a queue memory, backtracks from dead ends, and memorizes the valid path. Once the goal node is found, it computes the absolute shortest trajectory and executes a high-speed final run to the exit. The kinematics and navigation logic were rigorously simulated in Webots prior to physical deployment."
+    },
+     "chandraRover": {
+      "title": "Mission CHANDRA Rover (State 1st Prize Winner)",
+      "summary": "Award-winning 6-wheeled rover featuring an articulated 4-bar suspension, Arduino Mega + Raspberry Pi Zero compute, and LoRa telemetry.",
+      "details": "As a core member of Team Avalokita, I co-developed my first major robotics project—the Mission CHANDRA Rover. The rover secured 1st Place and a ₹30,000 prize at the state-level Mission CHANDRA competition. This successful deployment directly paved the way for my first research internship at SAC ISRO.\n\nMechanically, the rover utilizes a robust six-wheeled drive system integrated with a custom four-bar mechanism and bogie suspension. This articulated architecture ensures maximum vertical amplitude and adaptive ground contact, allowing the rover to maintain stability while climbing structured and unstructured obstacles.\n\nThe avionics stack relies on an Arduino Mega as the primary flight controller, paired with a Raspberry Pi Zero for secondary processing such as image recognition via the onboard camera module. It features a comprehensive sensor suite including an altimeter, gyroscope, accelerometer, compass, and environmental sensors. For long-range command and data retrieval, the system incorporates a LoRa transceiver, enabling both remote teleoperation and fully autonomous waypoint navigation."
+    },
+     "matlabDsp": {
+      "title": "Frequency Focus: MATLAB DSP Framework",
+      "summary": "A digital signal processing tool utilizing Fast Fourier Transform (FFT) and IIR Butterworth filtering to isolate specific instrument frequencies from complex audio.",
+      "details": "Developed a MATLAB-based digital signal processing (DSP) framework designed to selectively isolate and enhance specific instrument frequencies—specifically flute components—from complex, multi-instrumental MP3 audio tracks.\n\nThe signal processing pipeline utilizes Fast Fourier Transform (FFT) for initial spectral analysis to identify frequency distributions. To isolate the target instrument, a custom IIR Butterworth band-pass filter is applied, strictly targeted at a center frequency of 585.544 Hz. Residual low-frequency noise is suppressed using a Moving Average Filter (MAF), followed by precise amplitude normalization to prevent digital clipping and restore acoustic clarity.\n\nThe system automatically generates comparative visual metrics, including time-domain waveforms, frequency spectrum graphs, and detailed spectrograms to validate the successful extraction. This framework serves as a versatile baseline tool for applications in audio restoration, forensic audio analysis, and instrumental extraction for music production."
+    }
+  },
+
+  "media": {
+    "title": "[ Press & Media ]",
+    "newspaperFeatures": "Newspaper Features",
+    "podcastAppearances": "Podcast Appearances",
+    "listenNow": "Listen Now",
+    "newspapers": [
+      {
+        "title": "Divya Bhaskar",
+        "description": "Feature on Autonomous Rover Project (2025)"
+      },
+      {
+        "title": "Gujarat Samachar",
+        "description": "National Level Robotics Competition Win (2025)"
+      },
+      {
+        "title": "Sandesh",
+        "description": "Mission CHANDRA State Level Recognition (2023)"
+      }
+    ],
+    "podcasts": [
+      {
+        "title": "Junarakar Sat-01 Success Story",
+        "description": "An in-depth discussion detailing the engineering journey, payload development, and successful 30km near-space launch of the Junarakar Sat-01 balloon satellite.",
+        "link": "https://www.youtube.com/live/YIOxnmEDUfQ"
+      }
+    ]
+  },
+
+  "education": {
+    "title": "[ Education ]",
+    "bvm": {
+      "degree": "B.Tech in Electronics and Communication Engineering",
+      "result": "CPI: 9.09/10.0 (Gold Medalist)"
+    },
+    "hsc": {
+      "degree": "HSC",
+      "result": "Percentage: 61.62%"
+    },
+    "ssc": {
+      "degree": "SSC",
+      "result": "Percentile: 91.63%"
+    }
+  },
+  "achievements": {
+    "title": "[ Achievements ]",
+    "gaurav2026": "Gaurav Puraskar Winner, BVM",
+    "gold4th": "Gold Medalist - Highest CPI in 4th Year, BVM",
+    "student": "Student of the Year 2026, BVM Engineering College",
+    "robo4": "1st Place, Robofest 4.0 - National Level Robotics Competition, Rover Category",
+    "silver": "Silver Medalist - Highest CPI in 1st, 2nd & 3rd Year, EC Department, BVM",
+    "gaurav2024": "Gaurav Puraskar Winner, BVM",
+    "expo": "3rd Prize, ECE Project Expo, BVM - CubeSat Prototype",
+    "missionChandra": "1st Place, Mission CHANDRA - State Level SAC-ISRO Rover Design Challenge",
+    "robo3": "2nd Round Qualifier, Robofest 3.0"
+  },
+   "publications": {
+    "title": "[ Publications & Patents ]",
+    "reviewPaper": "Review Paper",
+    "loraDesc": "\"Doppler Limits of LoRa in LEO: A Critical Review of the First In-Orbit Flight Tests,\" published in Recent Trends in Electronics and Computer Science (RTECS), Volume 12, Issue 02, Pages 21-27, 2025.",
+    "readItHere": "Read it here",
+    "patentTitle": "Patent (Published)",
+    "patentDesc": "Eight Wheeled Rover Robot (Published 25 June 2026)"
+  },
+  "contact": {
+    "title": "[ Get In Touch ]",
+    "subtitle": "Contact Details",
+    "text": "Feel free to reach out via email, phone, or social media. I'm always open to discussing new projects, creative ideas, or opportunities.",
+    "nameLabel": "Your Name",
+    "emailLabel": "Your Email",
+    "messageLabel": "Message",
+    "sendBtn": "Send Message"
+  }
+  
+}

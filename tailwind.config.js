@@ -1,27 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class', // We will default to a dark theme
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      // Blueprint Theme Color Palette
       colors: {
-        'theme-bg': '#0a192f',       // Dark Navy Blue
-        'theme-text-primary': '#ccd6f6', // Light Slate
-        'theme-text-secondary': '#8892b0', // Slate Gray
-        'theme-accent': '#64ffda',       // Bright Cyan/Mint
-        'theme-border': '#172a45',    // Lighter Navy for borders
+        'theme-bg': '#0f172a',           // Deep Slate Background
+        'theme-text-primary': '#f8fafc', // Crisp Off-White
+        'theme-text-secondary': '#94a3b8', // Soft Slate Gray
+        'theme-accent': '#38bdf8',       // Aerospace Blue
+        'theme-border': '#1e293b',       // Faint Border Color
       },
       fontFamily: {
-        // Set Roboto Mono as the primary font
-        sans: ['Roboto Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
-      // Add a subtle glow effect
       boxShadow: {
-        'glow': '0 0 15px rgba(100, 255, 218, 0.3)',
+        'glow': '0 10px 30px -10px rgba(56, 189, 248, 0.1)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)',
       },
     },
   },

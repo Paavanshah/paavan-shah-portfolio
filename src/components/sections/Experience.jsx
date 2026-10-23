@@ -1,42 +1,40 @@
 import { Section } from '../layout/Section.jsx';
 import { AnimatedView } from '../ui/AnimatedView.jsx';
-import experience from '../../data/experience.js';
+import experienceData from '../../data/experience.js';
+import { useTranslation } from 'react-i18next';
 
 export const Experience = () => {
+  const { t } = useTranslation();
+
   return (
-    <Section id="experience" title="[ Experience ]">
-      <div className="relative max-w-6xl mx-auto">
-        <div className="absolute left-4 top-4 w-0.5 h-full bg-theme-border"></div>
-        <div className="space-y-16">
-          {experience.map((job, index) => (
-            <AnimatedView key={index}>
-              <div className="relative pl-12">
-                <div className="absolute left-0 top-2 w-8 h-8 flex items-center justify-center bg-theme-accent text-theme-bg rounded-full font-bold">
-                  {index + 1}
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                  <div className={`bg-theme-border/50 p-6 rounded-lg card-brackets order-2 ${job.image ? 'md:order-1' : 'md:col-span-2 md:order-2'}`}>
-                    <div className="relative z-10">
-                      <p className="text-sm font-medium text-theme-accent mb-1">{job.dates}</p>
-                      <h3 className="text-xl font-bold text-theme-text-primary">{job.role}</h3>
-                      <p className="text-theme-text-secondary mb-3">{job.org}{job.location && `, ${job.location}`}</p>
-                      <ul className="list-disc list-inside space-y-2 text-theme-text-secondary">
-                        {job.bullets.map((bullet, i) => (<li key={i}>{bullet}</li>))}
-                      </ul>
-                    </div>
-                  </div>
-                  {job.image && (
-                    <div className="flex justify-center items-center order-1 md:order-2">
-                      <div className="w-56 h-56 md:w-64 md:h-64 rounded-lg overflow-hidden shadow-lg">
-                        <img src={job.image} alt={job.org} className="w-full h-full object-cover" />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </AnimatedView>
-          ))}
-        </div>
+    <Section id="experience" title={t('experience.title')}>
+      <div className="space-y-12">
+        {experienceData.map((job, index) => (
+          <AnimatedView key={index} className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+            
+            {/* FIXED: Removed bg-white and padding. Swapped to a wide thumbnail with object-cover */}
+            <div className="flex-shrink-0 w-full md:w-64 h-48 md:h-40 overflow-hidden rounded-lg shadow-lg border border-theme-border">
+              <img 
+                src={job.image} 
+                alt={t(`experience.${job.key}.org`)} 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+            </div>
+
+            <div className="flex-grow text-left">
+              <h3 className="text-2xl font-bold text-theme-text-primary">{t(`experience.${job.key}.role`)}</h3>
+              <p className="text-xl text-theme-accent font-medium mt-1">
+                {t(`experience.${job.key}.org`)} {job.loc ? `| ${t(`experience.${job.key}.loc`)}` : ''}
+              </p>
+              <p className="text-sm text-theme-text-secondary mt-1">{job.dates}</p>
+              <ul className="mt-4 space-y-2 list-none">
+                {t(`experience.${job.key}.b1`) && <li className="text-theme-text-secondary before:content-['▹'] before:absolute before:left-0 relative pl-5">{t(`experience.${job.key}.b1`)}</li>}
+                {t(`experience.${job.key}.b2`) && <li className="text-theme-text-secondary before:content-['▹'] before:absolute before:left-0 relative pl-5">{t(`experience.${job.key}.b2`)}</li>}
+                {t(`experience.${job.key}.b3`) && <li className="text-theme-text-secondary before:content-['▹'] before:absolute before:left-0 relative pl-5">{t(`experience.${job.key}.b3`)}</li>}
+              </ul>
+            </div>
+          </AnimatedView>
+        ))}
       </div>
     </Section>
   );

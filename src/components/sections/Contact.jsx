@@ -1,56 +1,81 @@
 import { Section } from '../layout/Section.jsx';
 import { AnimatedView } from '../ui/AnimatedView.jsx';
+import { useTranslation } from 'react-i18next';
 import config from '../../data/config.json';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin } from 'react-icons/fi';
 
 export const Contact = () => {
+  const { t } = useTranslation();
+
   return (
-    <Section id="contact" title="[ Get In Touch ]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <AnimatedView>
-          <h3 className="text-2xl font-bold mb-4 text-theme-text-primary">Contact Details</h3>
-          <p className="text-theme-text-secondary mb-6">
-            Feel free to reach out via email, phone, or social media. I'm always open to discussing new projects, creative ideas, or opportunities.
-          </p>
+    <Section id="contact" title={t('contact.title')}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        
+        {/* Left Side: Contact Details */}
+        <AnimatedView className="text-left space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-theme-text-primary mb-4">{t('contact.subtitle')}</h3>
+            <p className="text-theme-text-secondary leading-relaxed">
+              {t('contact.text')}
+            </p>
+          </div>
+          
           <div className="space-y-4">
-            <a href={`mailto:${config.email}`} className="flex items-center gap-4 group">
-              <FiMail className="w-6 h-6 text-theme-accent"/>
-              <span className="text-theme-text-secondary group-hover:text-theme-accent">{config.email}</span>
-            </a>
-            <a href={`tel:${config.phone.replace(/\s/g, '')}`} className="flex items-center gap-4 group">
-              <FiPhone className="w-6 h-6 text-theme-accent"/>
-              <span className="text-theme-text-secondary group-hover:text-theme-accent">{config.phone}</span>
-            </a>
-            <div className="flex items-center gap-4">
-              <FiMapPin className="w-6 h-6 text-theme-accent"/>
-              <span className="text-theme-text-secondary">{config.location}</span>
+            <div className="flex items-center gap-4 text-theme-text-secondary">
+              <FiMail className="text-theme-accent text-xl" />
+              <span>{config.email}</span>
+            </div>
+            <div className="flex items-center gap-4 text-theme-text-secondary">
+              <FiPhone className="text-theme-accent text-xl" />
+              <span>{config.phone}</span>
+            </div>
+            <div className="flex items-center gap-4 text-theme-text-secondary">
+              <FiMapPin className="text-theme-accent text-xl" />
+              <span>{config.location}</span>
             </div>
           </div>
         </AnimatedView>
+
+        {/* Right Side: Contact Form */}
         <AnimatedView>
           <form 
-            action={`https://formspree.io/f/xnnbbgrr`} // Make sure to add your ID to config.json
+            action={`https://formspree.io/f/${config.formspreeId}`} 
             method="POST" 
-            className="space-y-6"
+            className="space-y-6 bg-theme-border/20 p-8 rounded-lg border border-theme-border text-left"
           >
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-theme-text-secondary">Your Name</label>
-              <input type="text" name="name" id="name" required className="mt-1 block w-full px-3 py-2 bg-theme-border/50 border border-theme-border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-theme-accent"/>
+              <label className="block text-sm font-medium text-theme-text-secondary mb-2">{t('contact.nameLabel')}</label>
+              <input 
+                type="text" 
+                name="name" 
+                required 
+                className="w-full px-4 py-2 rounded-md bg-theme-bg border border-theme-border text-theme-text-primary focus:outline-none focus:border-theme-accent transition-colors"
+              />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-theme-text-secondary">Your Email</label>
-              <input type="email" name="email" id="email" required className="mt-1 block w-full px-3 py-2 bg-theme-border/50 border border-theme-border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-theme-accent"/>
+              <label className="block text-sm font-medium text-theme-text-secondary mb-2">{t('contact.emailLabel')}</label>
+              <input 
+                type="email" 
+                name="email" 
+                required 
+                className="w-full px-4 py-2 rounded-md bg-theme-bg border border-theme-border text-theme-text-primary focus:outline-none focus:border-theme-accent transition-colors"
+              />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-theme-text-secondary">Message</label>
-              <textarea name="message" id="message" rows="4" required className="mt-1 block w-full px-3 py-2 bg-theme-border/50 border border-theme-border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-theme-accent"></textarea>
+              <label className="block text-sm font-medium text-theme-text-secondary mb-2">{t('contact.messageLabel')}</label>
+              <textarea 
+                name="message" 
+                rows="4" 
+                required 
+                className="w-full px-4 py-2 rounded-md bg-theme-bg border border-theme-border text-theme-text-primary focus:outline-none focus:border-theme-accent transition-colors resize-none"
+              ></textarea>
             </div>
-            <input type="text" name="_gotcha" style={{display: 'none'}} />
-            <div>
-              <button type="submit" className="w-full px-6 py-3 font-semibold bg-theme-accent text-theme-bg rounded shadow-glow hover:opacity-90 focus:outline-none transition-opacity">
-                Send Message
-              </button>
-            </div>
+            <button 
+              type="submit" 
+              className="w-full bg-theme-accent text-theme-bg font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity"
+            >
+              {t('contact.sendBtn')}
+            </button>
           </form>
         </AnimatedView>
       </div>

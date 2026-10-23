@@ -1,37 +1,69 @@
+
 [
   {
-    "title": "Languages",
+    "title": "Programming & Software",
     "items": [
+      "Embedded C",
       "C++",
-      "C",
       "Python",
+      "MATLAB",
       "Verilog",
-      "MATLAB"
+      "Git"
     ]
   },
   {
-    "title": "Software & Tools",
+    "title": "Embedded Platforms",
     "items": [
-      "ROS2",
-      "Arduino IDE",
-      "Xilinx Vivado",
-      "EasyEDA",
-      "LTspice",
-      "Ubuntu",
-      "Fusion 360",
-      "Onshape"
-    ]
-  },
-  {
-    "title": "Hardware & Embedded Platforms",
-    "items": [
+      "ARM Cortex-M",
       "Arduino",
-      "ESP32 / ESP8266",
-      "Raspberry Pi",
+      "ESP32",
       "Jetson Nano",
-      "Pixhawk 2.4.8",
-      "BASYS3",
-      "MSP430"
+      "Raspberry Pi",
+      "Pixhawk"
+    ]
+  },
+  {
+    "title": "Communication & Interfaces",
+    "items": [
+      "SPI",
+      "I2C",
+      "UART",
+      "CAN",
+      "RS-485",
+      "LoRa"
+    ]
+  },
+  {
+    "title": "Robotics & Autonomous Systems",
+    "items": [
+      "ROS 2",
+      "SLAM",
+      "Sensor Fusion",
+      "Autonomous Navigation",
+      "PID Control",
+      "Gazebo Simulation"
+    ]
+  },
+  {
+    "title": "Engineering Tools",
+    "items": [
+      "Ubuntu/Linux",
+      "Arduino IDE",
+      "VS Code",
+      "Xilinx Vivado",
+      "Fusion 360",
+      "MATLAB/Simulink",
+      "Altium Designer"
+    ]
+  },
+  {
+    "title": "Specialization Areas",
+    "items": [
+      "Embedded Firmware",
+      "Robotics & Control Systems",
+      "Autonomous Systems",
+      "Satellite Systems",
+      "Space Robotics"
     ]
   }
 ]
